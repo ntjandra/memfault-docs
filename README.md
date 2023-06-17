@@ -41,12 +41,30 @@ Add a new page called "Inspecting an Issue" to the docs:
 
 3. Inside the doc, create an outline of what the doc contents are.
 
-3. Add the new page to `sidebars.js`.
+4. Add the new page to `sidebars.js`.
 
 ### Part 2: Write parts of "Inspecting an Issue"
 
 1. Write the introductory paragraph that will introduce how to inspect an issue.
 2. Write the Threads section
+
+
+## Process
+Any relevant important things for the reviewers to be aware of.
+
+### Part One
+The outline is loosely based on the demo provided. I took a look at what components were shown, but had issues running the playground version. As a result, I did not find out what happens when a user intereacts with some features. These features are labeled as what I dubbed "Advanced Features". 
+
+The outline is organized in the customer journey where a user will start by loading a memory dump, downloading it, then inspecting the memory dump to identify an issue. Next, I decided to explain the Threads panel as that was the high-level overview of the memory dump. 
+
+After threads, I did not have a name for the left panel, so I called it the Issues Panel Following the demo flow, the engineer explains in low-level what the issue is from looking at the panel, so I included a section for examples of issues.
+
+Before closing, I wanted to include a soft CTA to promote usage. This came as collaborative features, such as commenting on an issue. I did not cover merging an issue since it was outside of the red outlined box, 
+
+Finally, I added Advanced features as  areas that I lacked information on and weren't discussed in the demo. Due to this, I assumed it's for technical experts and could be a separate page of it's own, focusing on logging (Recent traces, logs panel, and Memory viewer).
+
+### Part Two
+TBD
 
 ## Documentation Improvements
 
