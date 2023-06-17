@@ -15,6 +15,7 @@ module.exports = {
                 "platform/memfault-terminology",
                 "platform/projects-and-fleets",
                 "platform/inspecting-a-device",
+                "platform/inspecting-an-issue",
                 "platform/software-version-hardware-version",
                 {
                     label: "Users & Teams",
