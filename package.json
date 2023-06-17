@@ -13,9 +13,9 @@
         "lint:prettier": "yarn lint:prettier:base --check"
     },
     "dependencies": {
-        "@docusaurus/core": "^2.3.1",
-        "@docusaurus/plugin-ideal-image": "^2.3.1",
-        "@docusaurus/preset-classic": "^2.3.1",
+        "@docusaurus/core": "^2.4.1",
+        "@docusaurus/plugin-ideal-image": "^2.4.1",
+        "@docusaurus/preset-classic": "^2.4.1",
         "classnames": "^2.2.6",
         "core-js": "^3.4.1",
         "mobx": "^4.2.0",
