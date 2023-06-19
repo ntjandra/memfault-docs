@@ -46,6 +46,7 @@ Add a new page called "Inspecting an Issue" to the docs:
 ### Part 2: Write parts of "Inspecting an Issue"
 
 1. Write the introductory paragraph that will introduce how to inspect an issue.
+
 2. Write the Threads section
 
 ## Process
@@ -67,18 +68,24 @@ For the intro, I tried to give a high-level overview of all important components
 
 In the threads section, I broke down the panel into 2 sections, one focusing on the call stack, and the other on tags. The call stack is relatively straightforward so I felt that there wasn't much to say as the contents are not clickable. For both technical and non-technical users, the tags are the bread and butter of the thread section. These tags didn't have a name, so I gave them names based on their puposes. I further simplified tags by making it clear they were mutually exclusive tags, so a state tag cannot be running and blocked and a causal tag cannot be due to a stack overflow and a system interupt by user. For the selling point, I doubled down on the automated analysis shown by the Stack Overflow tag in the playground. 
 
+To end off part 2, I included images of the product using the photos provided in the take home assignment. I added an alt text for screen readers that describes the image and followed best practices of using the ImageComponent. I ended up using relative path after some time trying to get the absolute path working. I did a file search on the repo and noticed all other image component usage for the web app is also using relative, so I chose to match it. 
+
+### Part 3
+TBD
+
 ## Documentation Improvements
 
 ### Style Improvements
-
 - Docs Naming. Instead of "Inspecting an Issue", use "Inspect Issue" because it's shorter and doesn't imply a tense. This makes it more accessible and simpler for future i18n efforts.
 - Modules. Inspecting an Issue is a large piece of work, breaking it down into sub components like in Issues & Traces would benefit the readability. These sub components would match the H2's I put down in the outline focused on explaining the UI, issue examples, and advanced features.
 
 ### Technical Improvements
 - Link to other pages where applicable.
 - Add [keywords](https://docusaurus.io/docs/seo) front matter in order to build up SEO.
+- Improve maintainability by using absolute paths instead of relative paths for images.
 
 ### Maintainence Mentions
-- I wasn't sure if there were more casual tags
+- I wasn't sure if there were more casual tags.
+
 ### Maybe?
 - Create a new post under `blog/` using the existing filename conventions. Copy the header from an existing post and give it a nice title.
