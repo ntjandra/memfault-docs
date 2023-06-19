@@ -4,11 +4,20 @@ title: Inspecting an Issue
 sidebar_label: Inspecting an Issue
 ---
 
+import issueDetails from "../../static/img/docs/platform/issue-details-page.png";
+import issueThreadsPanel from "../../static/img/docs/platform/issue-threads-panel.png";
+
 During the event of a core dump, your device will log an issue and send it to Memfault where it will be analyzed. 
 Once the core dump is analyzed, it will be available on the Memfault's web app and ready for inspection as an issue. 
 These issues are tracked on the Smart Sink Issues Dashboard containing information on system processes, device state, and logs. 
 
-[image]
+<ImageFigure
+  src={issueDetails}
+  alt="Issue Details page of the Memfault Web App"
+  title="Issue Details"
+>
+  Issue Details page of the Memfault Web App.
+</ImageFigure>
 
 The web app provides an interface to help you inspect these issues in fine detail by breaking down the events.
 - Device Overview: Inspect high-level causes from version changes as a software or hardware malfunction.
@@ -24,11 +33,16 @@ The web app provides an interface to help you inspect these issues in fine detai
 ### Version History
 
 ## Thread Panel
-
-[image2]
-
 The thread panel is located on the bottom left, under the capture details.
-The panel contains a list of threads and is used to trace back the event log of each individual process associated with the core dump.
+The panel contains a list of threads used to trace back the event log of each individual process associated with the core dump.
+
+<ImageFigure
+  src={issueThreadsPanel}
+  alt="Threads Panel on the Memfault Web App"
+  title="Threads Panel"
+>
+  Threads Panel on the Memfault Web App
+</ImageFigure>
 
 ### Call Stack
 The panel consists of the call stack, which can be opened to see it's children processes. By following the tree-like structure you're able to dive deeper into the cause of the issue.
