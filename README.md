@@ -48,35 +48,37 @@ Add a new page called "Inspecting an Issue" to the docs:
 1. Write the introductory paragraph that will introduce how to inspect an issue.
 2. Write the Threads section
 
-
 ## Process
 Any relevant important things for the reviewers to be aware of.
 
 ### Part One
-The outline is loosely based on the demo provided. I took a look at what components were shown, but had issues running the playground version. As a result, I did not find out what happens when a user intereacts with some features. These features are labeled as what I dubbed "Advanced Features". 
+The outline is organized following the customer journey, A user starts at the dashboard page and inspects high-level and low-level root causes. This could be an error with the software update, or bad code running on the device. Next, I decided to explain the Threads panel as that was how a user would dive deeper into the issue. 
 
-The outline is organized in the customer journey where a user will start by loading a memory dump, downloading it, then inspecting the memory dump to identify an issue. Next, I decided to explain the Threads panel as that was the high-level overview of the memory dump. 
+After threads, I did not have a name for the left panel, so I called it the Issues Panel. My outline follows the flow of the demo, the engineer explains in low-level what the issue is from looking at the panel, so I included a section for examples of issues.
 
-After threads, I did not have a name for the left panel, so I called it the Issues Panel Following the demo flow, the engineer explains in low-level what the issue is from looking at the panel, so I included a section for examples of issues.
+Before closing, I wanted to include a soft CTA to promote usage. This came as collaborative features, such as commenting on an issue. I did not cover merging an issue since it was outside of the red outlined box. 
 
-Before closing, I wanted to include a soft CTA to promote usage. This came as collaborative features, such as commenting on an issue. I did not cover merging an issue since it was outside of the red outlined box, 
-
-Finally, I added Advanced features as  areas that I lacked information on and weren't discussed in the demo. Due to this, I assumed it's for technical experts and could be a separate page of it's own, focusing on logging (Recent traces, logs panel, and Memory viewer).
+Finally, I added Advanced features as areas that I lacked information on and weren't discussed in the demo. Due to this, I assumed it's for technical experts and could be a separate page of it's own or link out to an existing page, such as "Debugging Core Dumps" or "Inspecting Memory regions".
 
 ### Part Two
-TBD
+While writing the intro for part 2, I had access to the demo and redid some of part one to clarify what the top section was for. I wrote the intro as a high-level blueprint of what's on the Issues Dashboard/Issues Detail View and how it related back to inpecting an issue. For the threads, I focused on what was shown in the initial image given for the assignment, as a stack-trace for processes. 
+
+For the intro, I tried to give a high-level overview of all important components in the issue details page. I focused on breaking down each section into sizable chunks. I started with an intro on why a user might be inspecting an issue, focusing on Memfault's selling point of analyzing core dumps. Next, I wrote about the usefulness of the UI/dashboard and how the page is organized in. Similarly to the outline, I ordered the items following the customer journey of looking for high-level causes and then diving deeper into low-level causes.
+
+In the threads section, I broke down the panel into 2 sections, one focusing on the call stack, and the other on tags. The call stack is relatively straightforward so I felt that there wasn't much to say as the contents are not clickable. For both technical and non-technical users, the tags are the bread and butter of the thread section. These tags didn't have a name, so I gave them names based on their puposes. I further simplified tags by making it clear they were mutually exclusive tags, so a state tag cannot be running and blocked and a causal tag cannot be due to a stack overflow and a system interupt by user. For the selling point, I doubled down on the automated analysis shown by the Stack Overflow tag in the playground. 
 
 ## Documentation Improvements
 
 ### Style Improvements
 
 - Docs Naming. Instead of "Inspecting an Issue", use "Inspect Issue" because it's shorter and doesn't imply a tense. This makes it more accessible and simpler for future i18n efforts.
-- Inspecting an Issue is a large piece of work, breaking it down into sub components like in Issues & Traces would benefit the readability. These sub components would match the H2's I put down in the outline.
+- Modules. Inspecting an Issue is a large piece of work, breaking it down into sub components like in Issues & Traces would benefit the readability. These sub components would match the H2's I put down in the outline focused on explaining the UI, issue examples, and advanced features.
 
 ### Technical Improvements
 - Link to other pages where applicable.
-- Add anchors to local contents.
 - Add [keywords](https://docusaurus.io/docs/seo) front matter in order to build up SEO.
 
+### Maintainence Mentions
+- I wasn't sure if there were more casual tags
 ### Maybe?
 - Create a new post under `blog/` using the existing filename conventions. Copy the header from an existing post and give it a nice title.

@@ -4,19 +4,55 @@ title: Inspecting an Issue
 sidebar_label: Inspecting an Issue
 ---
 
-Included as part of the take-home requirements.
+During the event of a core dump, your device will log an issue and send it to Memfault where it will be analyzed. 
+Once the core dump is analyzed, it will be available on the Memfault's web app and ready for inspection as an issue. 
+These issues are tracked on the Smart Sink Issues Dashboard containing information on system processes, device state, and logs. 
+
+[image]
+
+The web app provides an interface to help you inspect these issues in fine detail by breaking down the events.
+- Device Overview: Inspect high-level causes from version changes as a software or hardware malfunction.
+- Core Dump: Download the raw core dump to debug it locally with GDB.
+- Threads and Processes: Dive deep into the intricasies of what happened before the crash.
+- Data captures: Analyze the state of the variables and memory address at each stage of the crash.
+- Console logs: Inspect logs created by programs running and system services.
 
 ## Capture Details
 
-### What's in a Core Dump
+### Device Overview
 
-### Download Core Dump
+### Version History
 
 ## Thread Panel
 
-### Call Stack
+[image2]
 
-### Status Tags
+The thread panel is located on the bottom left, under the capture details.
+The panel contains a list of threads and is used to trace back the event log of each individual process associated with the core dump.
+
+### Call Stack
+The panel consists of the call stack, which can be opened to see it's children processes. By following the tree-like structure you're able to dive deeper into the cause of the issue.
+
+### Tags
+Each thread captured by Memfault is automatically tagged based on the event analysis of Memfault.
+There are two types of tags: state tags and causal tags. Each tag can only be assigned one per event.
+
+#### State Tags
+State tags are represent the system state of the thread in charge of the device process.
+
+The state tags are broken down as:
+- Suspended: The thread has been canceled either due to an error or interupt.
+- Blocked: The thread is unable to run and waiting for another process to finish.
+- Running: The thread is currently working, and is running.
+- Ready: The thread is ready to run and idle, waiting for a task to be given.
+
+These tags are useful for determining which process to start inspecting first. You're more likely to find an issue in a suspended process, rather than a ready or blocked process.
+
+#### Causal Tags
+During the analysis of a core dump, Memfault may find the root cause immediately and tag it.
+
+Here are some issues Memfault can auto detect:
+- Stack Overflow: An error has occured where a variable stores more data than the memory allocated.
 
 ## Issue Panel
 
@@ -25,10 +61,6 @@ Included as part of the take-home requirements.
 ### Globals and Statics
 
 ### Heap Tracer
-
-### ISR
-
-### MPU
 
 ## Crash Analysis
 
@@ -53,3 +85,9 @@ Included as part of the take-home requirements.
 ### Logs
 
 ### Memory Viewer
+
+### Interrupt Service Routine (ISR) Analysis
+
+### Memory Protection Unit (MPU)
+
+### Debug Core Dump
