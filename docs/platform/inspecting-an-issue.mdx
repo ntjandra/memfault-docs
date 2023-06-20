@@ -45,7 +45,11 @@ The panel contains a list of threads used to trace back the event log of each in
 </ImageFigure>
 
 ### Call Stack
-The panel consists of the call stack, which can be opened to see it's children processes. By following the tree-like structure you're able to dive deeper into the cause of the issue.
+The panel consists of the call stack, which can be opened to view it's children processes. 
+By following the tree-like structure you're able to dive deeper into the cause of the issue.
+
+#### Functions
+The call stack contains a list of processes for each function. Open the function to reveal more details on the memory address, file location, frame size, type, and source. 
 
 ### Tags
 Each thread captured by Memfault is automatically tagged based on the event analysis of Memfault.
@@ -60,14 +64,19 @@ The state tags are broken down as:
 - Running: The thread is currently working, and is running.
 - Ready: The thread is ready to run and idle, waiting for a task to be given.
 
-These tags are useful for determining which process to start inspecting first. You're more likely to find an issue in a suspended process, rather than a ready or blocked process.
+State tags are useful for determining which process to start inspecting first. You're more likely to find an issue in a suspended or running process, rather than a ready or blocked process.
 
 #### Causal Tags
 During the analysis of a core dump, Memfault may find the root cause immediately and tag it.
 
 Here are some issues Memfault can auto detect:
 - Stack Overflow: An error has occured where a variable stores more data than the memory allocated.
+- Assert: An caught error created during testing within a service.
+- Watchdog: A validation error related to outdated or corrupted files in your device.
+- Hard Fault: A serious error that causes slow down or thrashing due to the device taking more time to return results.
+- Mem Fault: An error thrown by hardware for memory protection. This occurs when a program writes to a restricted area.
 
+Causal tags are used to assist in the debugging process and provide a high-level description of what error occured on the device, as well the severity.
 ## Issue Panel
 
 ### Registers and Locals

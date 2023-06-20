@@ -53,9 +53,9 @@ Add a new page called "Inspecting an Issue" to the docs:
 Any relevant important things for the reviewers to be aware of.
 
 ### Part One
-The outline is organized following the customer journey, A user starts at the dashboard page and inspects high-level and low-level root causes. This could be an error with the software update, or bad code running on the device. Next, I decided to explain the Threads panel as that was how a user would dive deeper into the issue. 
+The outline is organized following the customer journey. A user starts at the dashboard page and inspects high-level and low-level root causes. This could be an error with the software update, or bad code running on the device. Next, I decided to explain the Threads panel as that was how a user would dive deeper into the issue. 
 
-After threads, I did not have a name for the left panel, so I called it the Issues Panel. My outline follows the flow of the demo, the engineer explains in low-level what the issue is from looking at the panel, so I included a section for examples of issues.
+After threads, I did not have a name for the left panel, so I called it the Issues Panel. My outline follows the flow of the demo, where an engineer explains what the issue is from looking at the panel and connects it to a low-level error, so I included a section for examples of issues.
 
 Before closing, I wanted to include a soft CTA to promote usage. This came as collaborative features, such as commenting on an issue. I did not cover merging an issue since it was outside of the red outlined box. 
 
@@ -71,7 +71,11 @@ In the threads section, I broke down the panel into 2 sections, one focusing on 
 To end off part 2, I included images of the product using the photos provided in the take home assignment. I added an alt text for screen readers that describes the image and followed best practices of using the ImageComponent. I ended up using relative path after some time trying to get the absolute path working. I did a file search on the repo and noticed all other image component usage for the web app is also using relative, so I chose to match it. 
 
 ### Part 3
-TBD
+Part 3 focuses on the evaluation mentioned in the take home. It involves a short write-up describing any TODOs and Improvements.
+
+#### Short Write up
+
+I've listed documentation improvements focused on style and technical SEO. First, I would improve style by changing the name of the page to "inspect issue" instead of "inspecting an issue". In terms of page presentation, I would change the page to be broken up into multiple pages, since the initial outline is very long. I read through the Docusarus documentation to learn how to add pages, and saw that there is another improvement built-in using the keyword front matter. Another improvement would be to use the absolute path to link the images, instead of the relative path. On my Github, I've left my commit messages and history to show my process of making small incremental changes with a larger version of this write up to show my experience.
 
 ## Documentation Improvements
 
@@ -83,9 +87,3 @@ TBD
 - Link to other pages where applicable.
 - Add [keywords](https://docusaurus.io/docs/seo) front matter in order to build up SEO.
 - Improve maintainability by using absolute paths instead of relative paths for images.
-
-### Maintainence Mentions
-- I wasn't sure if there were more casual tags.
-
-### Maybe?
-- Create a new post under `blog/` using the existing filename conventions. Copy the header from an existing post and give it a nice title.
